@@ -1,0 +1,185 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-variation-settings:"wdth" 100;
+    
+    display: grid; /*تفعيل التخطيط*/
+    place-items: center; /*توسيط جميع القيم*/
+    height: 100vh; /*تحديد الارتفاع*/
+    font-family: Arial, sans-serif; /*تحديد الخط*/
+    background-image: url("https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+    
+}
+
+.login-container
+{
+    display: grid;  /*تفعيل التخطيط*/
+    grid-template-columns: 1fr; /*توزيع الاعمدة*/
+    gap: 16px; /*عمل فراغات بين العناصر*/
+    background: #c9c1c1; /*لون الخلفية*/
+    padding: 32px; /* هوامش داخلية لتكبير الديف*/
+    border-radius: 8px; /*تقويس زوايا الديف*/
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /*تاثير الظلال*/
+    width: 100%; /*تحديد العرض*/
+    max-width: 400px; /*الحد الاقصى للعرض لايمكن تجاوزه*/
+    text-align: center; /*توسيط العناصر افقيا*/
+}
+
+.logo 
+{
+    width: 320px; /*تحديد العرض*/
+    height: 80px; /*تحديد الارتفاع*/
+    margin: 0 auto 16px auto; /*  هوامش خارجية من الاسفل*/
+    /*تحديد خليفة للديف بدون تكرار وتعبئة على مستوى الشكل*/
+    background: url('../img/logo0.png') no-repeat center/cover; 
+    border-radius: 2%; /*تقويس زوايا الديف*/
+}
+
+/* تنسيقات العناون */
+.login-container h2
+{
+    
+    color: #333;
+    margin-bottom: 16px;
+    /* font-family: cursive; */
+    font-size: 2em;
+}
+
+/* تنسيقات الفورم */
+.login-form 
+{
+    display: flex; /*تفعيل الفليكس*/
+    flex-direction: column; /*ترتيب عمودي*/
+    gap: 16px; /*فواصل بين العنصر واللي تحته*/
+    margin-bottom: 16px;  /*هوامش خارجية من الاسفل*/
+}
+
+/* تنسيقات الفورم */
+.login-form input 
+{
+    padding: 12.8px;/*هوامش داخلية من كل الجهات*/
+    font-size: 16px; /*حجم الخط*/
+    border: 1px solid #ccc; /*الاطار*/
+    border-radius: 4px; /*تقويس الزوايا*/
+}
+
+/* تنسيقات زر التسجيل */
+.login-form button {
+    padding: 12.8px; /*هوامش داخلية من كل الاتجاهات*/
+    font-size: 16px; /*حجم الخط*/
+    background-color: #007bff; /*لون الخلفية*/
+    color: #fff; /*لون الخط*/
+    border: none; /*تنسيق الاطار (بدون اطار)*/
+    border-radius: 4px; /*تقويس الزوايا*/
+    cursor: pointer; /*تحديد شكل الماوس */
+    /*تحديد وقت للتأثير على لون خلفية العنصر*/
+    transition: background-color 0.3s; 
+}
+
+/*تنسيق عند مرور الماوس فوقه*/
+.login-form button:hover 
+{
+    background-color: #0056b3; /*لون الخلفية*/
+}
+
+/*تنسيق عند النقر*/
+.login-form button:active 
+{
+    background-color: #003165; /*لون الخلفية*/
+}
+
+/* تنسيقات ازرار التسجيل عبر مواقع التواصل */
+.social-buttons {
+    display: flex; /*تفعيل الفليكس*/
+    flex-direction: column; /*توزيع بشكل عامودي*/
+    gap: 0.8rem; /*فواصل بين كل عنصر واللي تحته*/
+}
+
+/* تنسيقات ازرار التسجيل عبر مواقع التواصل */
+.social-button 
+{
+    display: flex; /*تفعيل الفليكس*/
+    align-items: center; /*توسيط عامودي*/
+    justify-content: center; /*توسيط افقي*/
+    padding: 12px; /*هوامش داخلية كم كل الجهات*/
+    font-size: 16px; /*تحديد حجم الخط*/ 
+    color: #fff; /*لون الخط*/
+    border: none; /*تنسيق الاطار (بدون اطار)*/
+    border-radius: 4px; /*تقويس الزوايا*/
+    cursor: pointer; /*تحديد شكل المواس عند المرور فوق العنصر*/
+    transition: opacity 0.3s;  /*التحكم بتوقيت الشفافية*/
+}
+
+/*تنسيق زر جوجل*/
+.social-button.google {
+    background-color: #db4437; /*لون الخلفية*/
+}
+
+/*تنسيق شعار جوجل*/
+.social-button.google img
+{
+    width: 20px; /*العرض*/
+    height: 20px; /*الارتفاع*/
+    margin-left: 10px; /*هامش خارجي من اليسار*/
+}
+
+/*تنسيق زر فيسبوك*/
+.social-button.facebook {
+    background-color: #3b5998; /*لون الخلفية*/
+}
+ /*تنسيق شعار فيسبوك*/
+.social-button.facebook img
+{
+    width: 20px;/*العرض*/
+    height: 20px; /*الارتفاع*/
+    background-color: #000000; /*لون الخلفية*/
+}
+
+/*تنسيق زر جيثاب*/
+.social-button.github {
+    background-color: #242538; /*لون الخلفية*/
+}
+/*تنسيق شعار جيثاب*/
+.social-button.github img
+{
+    width: 20px;/*العرض*/
+    height: 20px;  /*الارتفاع*/
+    margin-left: 10px; /*هامش خارجي من اليسار*/
+    background-color: #000000; /*لون الخلفية*/
+}
+
+/*تنسيق الزر لمواقع التواصل بعد مرور الماوس من فوقه*/
+.social-button:hover {
+    opacity: 0.9; /*تحديد الشفافية*/
+}
+
+/*تنسيق الزر لمواقع التواصل بعد النقر على الماوس*/
+.social-button:active {
+    opacity: 0.7; /*تحديد الشفافية*/
+}
+
+.login-footer {
+    color: #ffffff; /*لون الخلفية*/
+    font-size: 14.4px;
+    margin-top: 16px;
+}
+
+/*تنسيق الرابط*/
+.login-footer a {
+    color: #007bff; /*لون الخلفية*/
+    text-decoration: none; /*بدون الخط اسفله*/
+}
+
+/*تنسيق الرابط عند مرور الماوس من فوقه*/
+.login-footer a:hover 
+{
+    text-decoration: underline; /*وضع خط تحته*/
+}
